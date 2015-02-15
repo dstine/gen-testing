@@ -1,0 +1,11 @@
+# directories
+build
+.gradle
+.idea
+
+# file extensions
+*.class
+*.iml
+*.ipr
+*.iws
+*.MF

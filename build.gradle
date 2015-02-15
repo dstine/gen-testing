@@ -1,0 +1,17 @@
+apply plugin: 'scala'
+apply plugin: 'application'
+
+mainClassName = 'com.github.dstine.gentesting.Main'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'org.scala-lang:scala-library:2.10.4'
+
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.scalatest:scalatest_2.10:2.2.4'
+  testCompile 'org.scalacheck:scalacheck_2.10:1.12.2'
+}
+
