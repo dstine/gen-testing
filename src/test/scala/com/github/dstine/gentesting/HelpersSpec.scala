@@ -28,9 +28,16 @@ class HelpersSpec extends FlatSpec with Matchers with PropertyChecks {
   }
 
   // Generated input
-  "addition" should "properly sum all integers" in {
+  "addition" should "be commutative" in {
     forAll ("a", "b") { (a: Int, b: Int) =>
-      Helpers.add(a, b) should be(a + b)
+      Helpers.add(a, b) should be (Helpers.add(b, a))
+    }
+  }
+
+  // Generated input
+  "addition" should "be associative" in {
+    forAll ("a", "b", "c") { (a: Int, b: Int, c: Int) =>
+      Helpers.add(Helpers.add(a, b), c) should be (Helpers.add(a, Helpers.add(b, c)))
     }
   }
 }
